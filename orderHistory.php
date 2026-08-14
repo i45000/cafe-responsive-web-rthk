@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Caf&eacute; Order History</title>
 <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    css/responsive.css
 </head>
 
 <body class="bodyStyle">
@@ -140,3 +142,6 @@ $conn->close();
 
 </body>
 </html>
+
+
+

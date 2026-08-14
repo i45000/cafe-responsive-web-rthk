@@ -1,0 +1,375 @@
+/*
+ * AWS Cafe Responsive Layout
+ * Version: 2.0.0-responsive
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    main,
+    .container,
+    .content,
+    .page-container {
+        width: 96%;
+        max-width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    body {
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    main,
+    .container,
+    .content,
+    .page-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    header,
+    nav,
+    footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav ul,
+    .navigation ul,
+    .navbar ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li,
+    .navigation li,
+    .navbar li {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    nav a,
+    .navigation a,
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .menu,
+    .menu-container,
+    .menu-grid,
+    .products,
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .menu-item,
+    .product,
+    .product-card,
+    .card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        line-height: 1.25;
+    }
+
+    p {
+        line-height: 1.55;
+    }
+}
+
+/* Cafe application-specific responsive rules */
+
+/* Tablet: two menu cards per row */
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 50%;
+        padding: 8px;
+    }
+
+    .mainHeader {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #mainPictures,
+    #aboutUs,
+    #Copyright {
+        width: 96%;
+        max-width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile: one menu card per row */
+@media screen and (max-width: 600px) {
+    .bodyStyle {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mainHeader {
+        width: 100%;
+        min-width: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .topnav {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .topnav a {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .column {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 12px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 16px auto;
+    }
+
+    .card .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .productTitle {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    #mainPictures,
+    #aboutUs,
+    #Copyright {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #mainPictures table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #mainPictures td {
+        min-width: 180px;
+    }
+
+    .cursiveText {
+        overflow-wrap: anywhere;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        margin: 8px 0;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/*
+ * Mobile-only colour theme
+ * This theme is only applied on screens up to 600px wide.
+ */
+
+@media screen and (max-width: 600px) {
+    body,
+    .bodyStyle {
+        background-color: #fff7ed;
+        color: #3f2d20;
+    }
+
+    .mainHeader {
+        background-color: #4a2c20;
+        color: #ffffff;
+        border-bottom: 4px solid #f59e0b;
+    }
+
+    .mainHeader .center {
+        color: #ffffff;
+    }
+
+    .topnav {
+        background-color: #7c2d12;
+    }
+
+    .topnav a {
+        background-color: #7c2d12;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .topnav a:hover,
+    .topnav a:focus {
+        background-color: #ea580c;
+        color: #ffffff;
+    }
+
+    .topnav a.active {
+        background-color: #f59e0b;
+        color: #2d1b12;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: #ffffff;
+        color: #3f2d20;
+        border: 2px solid #fed7aa;
+        border-radius: 14px;
+        box-shadow: 0 5px 14px rgba(74, 44, 32, 0.18);
+    }
+
+    .productTitle {
+        color: #9a3412;
+    }
+
+    .cursiveText {
+        color: #5b3a29;
+    }
+
+    .button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button {
+        background-color: #ea580c;
+        color: #ffffff;
+        border: 0;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .button:hover,
+    .button:focus,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    button:hover {
+        background-color: #c2410c;
+        color: #ffffff;
+    }
+
+    #Copyright {
+        background-color: #4a2c20;
+        color: #ffffff;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    table {
+        background-color: #ffffff;
+        color: #3f2d20;
+    }
+
+    a {
+        color: #9a3412;
+    }
+}
